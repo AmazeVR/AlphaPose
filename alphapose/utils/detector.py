@@ -13,11 +13,11 @@ from alphapose.utils.presets import SimpleTransform, SimpleTransform3DSMPL
 from alphapose.models import builder
 
 class DetectionLoader():
-    def __init__(self, input_source, detector, cfg, opt, mode='image', batchSize=1, queueSize=128):
+    def __init__(self, input_source, detector, cfg, opt, mode='image', batchSize=1, queueSize=128, device="cuda"):
         self.cfg = cfg
         self.opt = opt
         self.mode = mode
-        self.device = opt.device
+        self.device = device
 
         if mode == 'image':
             self.img_dir = opt.inputpath

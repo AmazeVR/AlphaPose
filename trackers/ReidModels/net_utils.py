@@ -7,7 +7,7 @@ import numpy as np
 from copy import deepcopy
 import pickle
 
-from utils.log import logger
+from ..utils.log import logger
 
 
 class ConcatAddTable(nn.Module):
